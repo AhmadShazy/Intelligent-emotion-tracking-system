@@ -1,0 +1,21 @@
+# Node dependencies
+node_modules/
+
+# Environment Variables (DO NOT COMMIT)
+.env
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+ENV/
+*.log
+
+# Personal execution scripts
+run_all.bat
