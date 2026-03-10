@@ -2,7 +2,8 @@
 
 An Intelligent Emotion System built with a **FastAPI** Python backend and a vanilla **HTML/JS/CSS** frontend. The system analyzes user input (both text and speech) to detect emotional states and provide adaptive, context-aware responses.
 
-![Project Status](https://img.shields.io/badge/status-active-success.svg)
+![Project Status](https://img.shields.io/badge/status-development-blue.svg)
+![Deployment](https://img.shields.io/badge/deployment-local-blueviolet.svg)
 ![Python Backend](https://img.shields.io/badge/backend-FastAPI-009688.svg)
 ![Frontend](https://img.shields.io/badge/frontend-Vanilla%20JS-F7DF1E.svg)
 
