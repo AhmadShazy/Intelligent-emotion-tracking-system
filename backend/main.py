@@ -10,7 +10,9 @@ from fastapi import FastAPI, HTTPException, UploadFile, File, Form
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import RedirectResponse
+from fastapi.staticfiles import StaticFiles
 import tempfile
+import os
 try:
     import soundfile as sf  # optional; used only for duration if available
 except Exception:
@@ -45,10 +47,9 @@ async def health():
     return {"status": "ok" if ok else "db-unreachable"}
 
 
-@app.get("/")
-async def root():
-    # redirect root to docs for convenience
-    return RedirectResponse(url="/docs")
+# Mount the frontend directory as static files serving at root
+frontend_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "frontend"))
+app.mount("/", StaticFiles(directory=frontend_dir, html=True), name="frontend")
 
 
 @app.on_event("startup")
